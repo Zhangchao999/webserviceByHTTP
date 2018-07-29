@@ -15,10 +15,19 @@ webservice的概念，这是一种技术，是一种跨越编程语言和操作�
 > 就是指服务器端和客户端可以在不同的操纵系统上运行。<br>
 * 远程调用
 > 即一台计算机的应用可以调用其他计算机上的应用。<br>
-简单的说，wenservice 可以让我们调用一些接口或者方法(已经有人写好的）例如关于天气，可以在 http://www.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl 中使用getWeatherbyCityName方法来获得城市的天气
+简单的说，wenservice 可以让我们调用一些接口或者方法(已经有人写好的）例如关于天气，可以在 http://www.webxml.com.cn/WebServices/WeatherWebService.asmx?wsdl 中使用getWeatherbyCityName方法来获得城市的天气，这个方法就是我们在WSDL文件中找到的。
 
 ## webservice运行原理
 webservice中，有三种技术：XML,SOAP，WSDL。<br>
 XML 简单就是我们所想的那个xml(常见于web.xml，spring-config.xml等等)。<br>
 SOAP 是一种协议（TCP/IP概念一样，就是协议，一种webservice中认可的规则），是基于XML的简易协议，可以使应用程序在HTTP之上进行信息交换，也就是说SOAP是用于访问网络服务的协议。<br>
 WSDL 相当于目录，可以同过这个文件查找到我们所用到的接口方法。<br>
+
+## 简单的示例
+所有的关于Java成语的示例一般都是 HelloWorld ， 或者 Hello... 的，我也不例外。<br>
+在eclipse中新建Java项目，命名为HelloWeb。<br>
+我的是这样的<br>
+![HelloWeb项目](https://github.com/Zhangchao999/wenserviceByHTTP/raw/master/pictures/1.png)
+
+
+接下来我会以三种方法来调用webservice，由简到难。<br>
