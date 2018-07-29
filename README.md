@@ -57,6 +57,34 @@ WSDL文档应该从下往上看，以我们的为例：<br>
 
 ### 调用
 重点来了，以上的部署及解释都是为了现在的调用。<br>
-##### 方法一 使用JDK 自带的wsimport 生成webservice客户端。
+##### 方法一、使用JDK 自带的wsimport 生成webservice客户端。
+在eclipse中新建Java项目，项目名为getHelloWeb，使用cmd进入该项目的src文件下<br>
+之后输入 wsimport -p com.zc.hello -s . http://127.0.0.1:8888/HelloWeb/sayHello?wsdl 命令。就会在src目录下生成可直接使用的客户端。<br>
+cmd界面：<br>
+![wsimport命令界面](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/3.png)
+形成的客户端：<br>
+![客户端界面](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/4.png)
+使用方式：<br>
+新建一个Java文件(HelloClient.java)：<br>
+
+```java 
+package com.zc.hello;
+
+public class HelloClient {
+	public static void main(String[] args) {
+		HelloServiceImpl helloServiceImpl = new HelloServiceImplService().getHelloServiceImplPort();
+		String result = helloServiceImpl.sayHello(" ,哈哈哈我是输出");
+		System.out.println("Result:"+result);
+	}
+}
+```
+```java
+// 输出显示
+
+Result:你好  ,哈哈哈我是输出
+```
+这样，我们就使用了自己发布的service，若是把该WSDL地址，告诉伙伴，他们也是可以访问到的(前提是你的先发布service),是不是很神奇。
+
+#### 第二种、
 
 
