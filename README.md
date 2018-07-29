@@ -64,6 +64,7 @@ cmd界面：<br>
 ![wsimport命令界面](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/3.png)
 形成的客户端：<br>
 ![客户端界面](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/4.png)
+<br>
 使用方式：<br>
 新建一个Java文件(HelloClient.java)：<br>
 
