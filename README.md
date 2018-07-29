@@ -28,6 +28,35 @@ WSDL 相当于目录，可以同过这个文件查找到我们所用到的接口
 在eclipse中新建Java项目，命名为HelloWeb。<br>
 我的是这样的<br>
 ![HelloWeb项目](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/1.png)
+<br>
+通过Endponint.publish(address,implement);发布服务，我发布的是 http://127.0.0.1:8888/HelloWeb/sayHello
+可以在 地址后加?wsdl 来查看WSDL文件 例如：http://127.0.0.1:8888/HelloWeb/sayHello?wsdl 
+这个服务是我现在发布的，只是用来测试的，如果你要访问肯定是不会访问到的。<br>
+让我们来看看这个WSDL文件，顺便分析分析他的结构。
+![WSDL文件](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/2.png)
+<br>
+先来解释一下标签的意思：<br>
+* service 
+	> 相关端口的集合，包括其关联的接口、操作、消息等。
+* Binding
+	> 特定端口类型的具体协议和数据格式规范。
+* portType
+	> 服务端点，描述webservice可被执行的操作方法，以及相关的消息，通过Binding指向portType。
+* message 
+	> 定义一个操作方法的数据类型。
+* type 
+	> 定义webservice使用的全部数据类型。
+<br>
+如何查看：
+WSDL文档应该从下往上看，以我们的为例：<br>
+1、先看service标签，这个标签下的binding="tns:HelloServiceImplPortBinding" ,我们看HelloServiceImplPortBinding。<br>
+2、往上找，找到binding标签，找到name 为 HelloServiceImplPortBinding 的，这里只有一个，但是第三方提供的或有很多个，
+找到type="tns:HelloServiceImpl".<br>
+3、继续往上找，找到portType 标签 ，找operation ,这就是我们可以用的方法，详细的数据可以在之上的message标签中找到详细的输入输出参数。<br>
+也可以看图片，基本都标了出来。<br>
+
+### 调用
+重点来了，以上的部署及解释都是为了现在的调用。<br>
+##### 方法一 使用JDK 自带的wsimport 生成webservice客户端。
 
 
-接下来我会以三种方法来调用webservice，由简到难。<br>
