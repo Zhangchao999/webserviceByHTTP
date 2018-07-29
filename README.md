@@ -1,0 +1,2 @@
+# webserviceByHTTP
+使用HTTP原生方式调用webservice
