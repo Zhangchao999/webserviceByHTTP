@@ -27,7 +27,7 @@ WSDL 相当于目录，可以同过这个文件查找到我们所用到的接口
 所有的关于Java成语的示例一般都是 HelloWorld ， 或者 Hello... 的，我也不例外。<br>
 在eclipse中新建Java项目，命名为HelloWeb。<br>
 我的是这样的<br>
-![HelloWeb项目](https://github.com/Zhangchao999/wenserviceByHTTP/raw/master/pictures/1.png)
+![HelloWeb项目](https://github.com/Zhangchao999/webserviceByHTTP/raw/master/pictures/1.png)
 
 
 接下来我会以三种方法来调用webservice，由简到难。<br>
