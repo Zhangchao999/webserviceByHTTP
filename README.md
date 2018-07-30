@@ -19,9 +19,12 @@ webservice的概念，这是一种技术，是一种跨越编程语言和操作�
 
 ## webservice运行原理
 webservice中，有三种技术：XML,SOAP，WSDL。<br>
-XML 简单就是我们所想的那个xml(常见于web.xml，spring-config.xml等等)。<br>
-SOAP 是一种协议（TCP/IP概念一样，就是协议，一种webservice中认可的规则），是基于XML的简易协议，可以使应用程序在HTTP之上进行信息交换，也就是说SOAP是用于访问网络服务的协议。<br>
-WSDL 相当于目录，可以同过这个文件查找到我们所用到的接口方法。<br>
+* XML 
+  > 简单就是我们所想的那个xml(常见于web.xml，spring-config.xml等等)。<br>
+* SOAP 
+  > 是一种协议（TCP/IP概念一样，就是协议，一种webservice中认可的规则），是基于XML的简易协议，可以使应用程序在HTTP之上进行信息交换，也就是说SOAP是用于访问网络服务的协议。<br>
+* WSDL 
+  > 相当于目录，可以同过这个文件查找到我们所用到的接口方法。<br>
 
 ## 简单的示例
 所有的关于Java成语的示例一般都是 HelloWorld ， 或者 Hello... 的，我也不例外。<br>
