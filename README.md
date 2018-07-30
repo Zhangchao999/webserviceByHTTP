@@ -273,6 +273,5 @@ public class HelloClient2 {
 ```
 // 输出为：
 <?xml version="1.0" ?><S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body><ns2:sayHelloResponse xmlns:ns2="http://impl.service.zc.com/"><return>你好  哈哈哈，你也好！</return></ns2:sayHelloResponse></S:Body></S:Envelope>
-
 ```
 这样，我们就获取到webservice 返回的文件了。
