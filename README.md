@@ -1,6 +1,3 @@
-# webserviceByHTTP
-使用HTTP原生方式调用webservice
-
 ---------
 # TOC
 [webservice是什么](#webservice是什么)<br>
